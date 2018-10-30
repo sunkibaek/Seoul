@@ -2,12 +2,10 @@ const sketch = require("sketch");
 const { DataSupplier } = sketch;
 const util = require("util");
 
+const generateRandomName = require("./generateRandomName").default;
+
 export function onStartup() {
-  DataSupplier.registerDataSupplier(
-    "public.text",
-    "Cities in Korea",
-    "SupplyData"
-  );
+  DataSupplier.registerDataSupplier("public.text", "한글 이름", "SupplyData");
 }
 
 export function onShutdown() {
@@ -19,8 +17,8 @@ export function onSupplyData(context) {
 
   const items = util.toArray(context.data.items).map(sketch.fromNative);
 
-  items.forEach((item, index) => {
-    let data = Math.random().toString();
+  items.forEach((_, index) => {
+    let data = generateRandomName();
 
     DataSupplier.supplyDataAtIndex(dataKey, data, index);
   });

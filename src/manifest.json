@@ -5,7 +5,7 @@
   "suppliesData": true,
   "commands": [
     {
-      "script": "my-command.js",
+      "script": "getKoreanNames.js",
       "handlers": {
         "actions": {
           "Startup": "onStartup",
