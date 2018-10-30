@@ -22,5 +22,8 @@
   "devDependencies": {
     "@skpm/builder": "^0.5.2"
   },
-  "author": "Sunki Baek <sunki.baek@gmail.com>"
+  "author": "Sunki Baek <sunki.baek@gmail.com>",
+  "dependencies": {
+    "prettier": "^1.14.3"
+  }
 }
